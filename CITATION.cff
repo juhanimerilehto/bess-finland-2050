@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this model or its results, please cite the paper."
+title: "Battery energy storage in Finland to 2050: a multi-method forecast of power, energy, cost and electricity use"
+version: 1.0.0
+date-released: 2026-11-17
+doi: 10.5281/zenodo.24322467
+license: MIT
+repository-code: "https://github.com/juhanimerilehto/bess-finland-2050"
+authors:
+  - family-names: Merilehto
+    given-names: Juhani
+    affiliation: "Oulu University of Applied Sciences; University of Turku"
+    orcid: "https://orcid.org/0000-0002-8010-3725"
+keywords:
+  - battery energy storage
+  - Finland
+  - scenario analysis
+  - free entry
+  - cannibalisation
+  - learning curves
+  - opinion pool
+  - Sobol sensitivity
+preferred-citation:
+  type: report
+  title: "Battery energy storage in Finland to 2050: a multi-method forecast of power, energy, cost and electricity use"
+  authors:
+    - family-names: Merilehto
+      given-names: Juhani
+      affiliation: "Oulu University of Applied Sciences; University of Turku"
+      orcid: "https://orcid.org/0000-0002-8010-3725"
+  year: 2026
+  doi: 10.5281/zenodo.24322467
+  publisher:
+    name: Zenodo

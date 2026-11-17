@@ -1,0 +1,45 @@
+{
+  "params_sha256": "b44dfaef823bca0d",
+  "raw_data": {
+    "present": [
+      "entsoe_da_FI.csv",
+      "entsoe_imb_FI.csv",
+      "fingrid_1.csv",
+      "fingrid_106.csv",
+      "fingrid_124.csv",
+      "fingrid_2.csv",
+      "fingrid_244.csv",
+      "fingrid_281.csv",
+      "fingrid_283.csv",
+      "fingrid_315.csv",
+      "fingrid_316.csv",
+      "fingrid_317.csv",
+      "fingrid_318.csv",
+      "fingrid_327.csv",
+      "fingrid_329.csv",
+      "fingrid_33.csv",
+      "fingrid_34.csv",
+      "fingrid_347.csv",
+      "fingrid_348.csv",
+      "fingrid_349.csv",
+      "fingrid_350.csv",
+      "fingrid_375.csv",
+      "fingrid_376.csv",
+      "fingrid_398.csv",
+      "fingrid_399.csv",
+      "fingrid_424.csv",
+      "fingrid_51.csv",
+      "fingrid_52.csv"
+    ],
+    "missing": [],
+    "changed": [
+      "fingrid_371.csv"
+    ]
+  },
+  "cost.py_sha256": "e48566491506b6b5",
+  "f_equilibrium.py_sha256": "dc465fc4d812e046",
+  "f_methods.py_sha256": "d5a0dddc317173b2",
+  "ensemble.py_sha256": "9832a597d4f4f0bb",
+  "stress.py_sha256": "183366ab293ab544",
+  "make_numbers.py_sha256": "94cac60f6a4206b7"
+}

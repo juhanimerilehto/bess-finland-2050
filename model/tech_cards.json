@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "version": "0.1.0-dev",
+    "date": "2026-11-16",
+    "note": "Per-technology parameter cards. Values carry evidence class (M,V,S,F,B,A) and source key. PNNL values are AC-AC at transformer level, USD 2021. [U] = unverified, check primary source.",
+    "pnnl": "Viswanathan, Mongird, Franks, Li, Sprenkle, Baxter (2022) 2022 Grid Energy Storage Technology Cost and Performance Assessment, PNNL-33283"
+  },
+  "li_ion_lfp": {
+    "status": "dominant; all Finnish operating and pipeline BESS",
+    "role": "core segment",
+    "duration_h": {"typical_2026": [1, 3], "trend": "4-8 h in Fingrid Q3/2026 scenarios", "class": "S/F"},
+    "rte_ac": {
+      "pnnl_transformer_2021": 0.8259, "pnnl_transformer_2030": 0.8452,
+      "pnnl_inverter_2021": 0.86, "pnnl_inverter_2030": 0.88,
+      "pnnl_dc_2021": 0.8955, "pnnl_dc_2030": 0.9163,
+      "nrel_2025": 0.85, "lazard_2026": [0.86, 0.92],
+      "field_incl_aux": 0.851, "field_excl_aux": 0.876, "field_source": "PNNL-28379 via secondary [U]",
+      "proposed_model": {"low": 0.82, "central": 0.85, "high": 0.89, "gain_pp_by_2035": 2, "gain_pp_by_2050": 3, "class": "B/A"}
+    },
+    "cycle_life_fec": {
+      "pnnl_2021_80dod_to_80pct": 2400, "pnnl_2030_80dod_to_80pct": 2640, "pnnl_60dod": 8000,
+      "pnnl_reported_range_80dod": [2475, 6250],
+      "vendor_587Ah_claim": ">10000 (DoD/EOL not stated)", "vendor_class": "V",
+      "proposed_model": {"2025": [4000, 6000, 15000], "2035": [5000, 8000, 15000], "2050": [6000, 10000, 20000], "class": "A", "order": "low, central, high"}
+    },
+    "calendar_life_yr": {"pnnl": 16, "nrel": 15, "lazard_with_augmentation": 20,
+      "proposed_model": {"2025": [12, 15, 20], "2050": [15, 20, 25], "class": "A"}},
+    "auxiliary_kw_per_mwh": {
+      "enertis_esn": 1.7, "enertis_note": ">15 MWh/yr per MWh capacity (B)",
+      "italy_field_air_cooled": 3.3, "italy_share_of_throughput": 0.045, "italy_source": "Dimovski et al. 2026 Batteries 12:288 via secondary [U]",
+      "liquid_cooled_5mwh_block": [2.2, 4.4], "winter_heating_kw_per_5mwh": [8, 10], "block_source": "consultant post, OEM values [U]",
+      "proposed_model": {"low": 1.5, "central": 2.5, "high": 4.5, "class": "B/A"}
+    },
+    "cells_2024_2026": {
+      "EVE_628Ah": "mass production Dec 2024", "CATL_587Ah": "deliveries Jun 2025; 434 Wh/L; >10,000 cycles",
+      "HiTHIUM_587Ah": "deliveries Aug 2025; 415 Wh/L; 94.5% efficiency", "Sunwoda_684Ah": ">=440 Wh/L; Sep 2025",
+      "class": "V", "source": "ESS News 22 Jan 2026; 16 Apr 2025"
+    },
+    "container_mwh_20ft": {"2024_2025": 6.25, "examples": "CATL TENER (Apr 2024), HiTHIUM inf-Power", "larger_units_2025": 9, "class": "V"},
+    "degradation_notes": "Calendar ageing ~62% of loss at first replacement; omitting it understates lifecycle cost ~35% (Butt & Li 2026). Separate low-temperature cycle ageing (plating) mechanism (Schimpe et al. 2018). CATL 'zero degradation 5 yr' = sacrificial Li5FeO4 additive delaying fade.",
+    "cold_climate": "Cell window ~10-30 C; heating needed in Finnish winter; cold lowers calendar ageing, raises plating risk if charged cold.",
+    "pnnl_installed_usd_kwh": {"100MW_4h_2021": 385, "100MW_4h_2030": 291, "100MW_10h_2021": 356}
+  },
+  "sodium_ion": {
+    "status": "early commercial; ~9 GWh shipped globally 2025 (V, secondary)",
+    "role": "chemistry variant within BESS segment",
+    "energy_density_wh_kg": {"range": [130, 175], "class": "V/B", "note": "CATL Naxtra 175 (V); generic 130"},
+    "cycle_life_fec": {"range": [3000, 10000], "class": "V/B", "note": "sources conflict"},
+    "cold_climate": {"operating_range_c": [-40, 70], "retention_minus20c": ">92% (BAIC, V)", "class": "V"},
+    "cost_parity_with_lfp": {"expected": "2028-2029", "class": "B (secondary, BNEF via Earth Energy Log)", "note": "contested; cell cost claims range $19-105/kWh"},
+    "model_use": "share of new BESS from 2030 as variant (0 / 10 / 30%); lower auxiliary kW/MWh (passive TMS) and lower cost tail"
+  },
+  "vanadium_flow": {
+    "status": "commercial at GWh scale in China; ~20 MWh max outside China",
+    "role": "not modelled separately",
+    "rte_ac": {"pnnl": 0.65, "class": "B"},
+    "cycle_life": "unlimited electrolyte; stacks 12 yr; project 24 yr (PNNL)",
+    "projects": {"Jimusaer_CN": "200 MW / 1,000 MWh, operational Dec 2025 (V)", "Rongke_total_connected": ">3.5 GWh (V)"},
+    "lcos_usd_mwh_bnef_2026": {"vrfb": 214, "li_ion": 122, "class": "B (via secondary)"},
+    "pnnl_installed_usd_kwh": {"100MW_10h_2021": 385}
+  },
+  "iron_air": {
+    "status": "first commercial systems Q4 2025 (Form Energy, V); ~80 GWh under agreement (V)",
+    "role": "multi-day stress case",
+    "duration_h": 100,
+    "rte_ac": {"independent_estimate": [0.40, 0.50], "sacra": [0.45, 0.55], "class": "B"},
+    "capex_target_usd_kwh": {"value": "<20 (system, at scale)", "class": "V", "note": "equals Sepulveda et al. 2021 threshold for >=10% system cost reduction"},
+    "projects": {"Xcel_Google_MN": "300 MW / 30 GWh (contract)", "Ireland": "10 MW / 1 GWh, ~2029 (planned)"}
+  },
+  "pumped_hydro": {
+    "status": "mature; none in Finland",
+    "role": "exogenous project-based long-duration segment",
+    "rte_ac": {"pnnl": 0.80, "class": "B"},
+    "calendar_life_yr": {"pnnl": 60},
+    "construction_yr": {"pnnl": 5},
+    "pnnl_installed_usd_kwh": {"100MW_10h": 263, "100MW_24h": 143},
+    "finnish_projects": {
+      "Kemijoki_Ailangantunturi": {"mw": 550, "mwh": null, "status": "permits applied May 2026; construction >=2029; operation ~2033 subject to FID", "class": "V"},
+      "PVO_PUHTI_Kemijarvi": {"mw": 500, "mwh": 25000, "status": "EIA; operation 2030s", "class": "V"},
+      "Pyhasalmi": {"mw": 75, "mwh": 530, "status": "[U] from Eurelectric/AFRY summary", "class": "V"}
+    },
+    "model_use": "0 / 0.55 / 1.05 GW by 2035-2040 (Low/Base/High)"
+  },
+  "caes": {"status": "mature, cavern-dependent", "rte_ac": {"pnnl": 0.52}, "role": "excluded (no salt caverns in Finland)", "pnnl_installed_usd_kwh": {"100MW_4h_2021": 295, "100MW_10h_2021": 122}},
+  "hydrogen_p2p": {"status": "demonstration", "rte_ac": {"pnnl": 0.31}, "role": "outside storage boundary; competing flexibility; Fingrid vision 2040 H2 scenario ~5 GW electric-equivalent storage"},
+  "thermal_sand": {
+    "status": "commercial in Finland (heat out only)",
+    "role": "outside storage boundary; competing flexibility for low-price hours; may bid reserves",
+    "projects": {"Pornainen": "1 MW / 100 MWh heat, commissioned Jun 2025", "Vaaksy_Lahti": "2 MW / 250 MWh heat, completion summer 2027"},
+    "efficiency_heat_to_heat": {"range": [0.80, 0.90], "class": "V"}
+  },
+  "gravity_laes": {"status": "demonstration/early", "rte_ac": {"pnnl_gravity": 0.83}, "role": "excluded (no Finnish projects)"},
+  "grid_forming": {
+    "fingrid_storage_code": "grid-forming required for large batteries (Merus Rovaniemi 30 MW / 80 MWh cited)",
+    "fingrid_weak_grid_vre_oct2026": {"escr_0.9_1.0": 0.10, "escr_0.7_0.9": 0.20, "escr_below_0.7": 0.30, "unit": "battery +/- share of plant capacity", "conditions": "type D wind/solar, ESCR<1.0, new connections; online at >=50% output; within 60 km", "class": "S"},
+    "eu_rfg2": "binding grid-forming for new storage >1 MW proposed (ENTSO-E phase II report, Nov 2025); national implementation pending",
+    "model_use": "non-market co-located BESS component proportional to new weak-grid VRE"
+  }
+}

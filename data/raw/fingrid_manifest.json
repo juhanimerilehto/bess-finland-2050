@@ -1,0 +1,191 @@
+{
+  "424": {
+    "name": "Total installed BESS capacity (MW), from 11.3.2026",
+    "rows": 5947,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "aa4ae127e6eba243f1c5c553e74ee0a33bea1d0ecaac8500032ebecc3550555a"
+  },
+  "398": {
+    "name": "BESS discharging power, real-time (MW, 3 min)",
+    "rows": 223014,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "ab3d1541e09acf01ed8bff91d4511d43f91e9f310473cb5e539b3639c347620e"
+  },
+  "399": {
+    "name": "BESS charging power, real-time (MW, 3 min)",
+    "rows": 220168,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "4a52e304b8a557cb8d97ee8714b438fbf33d8423fd90a29d7a8baae834585bae"
+  },
+  "124": {
+    "name": "Electricity consumption in Finland (15 min)",
+    "rows": 123585,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "0b52ec69dbf28d25b1ae4c3385875d5749edb8471c22636c3e0d0c04f3cb165c"
+  },
+  "371": {
+    "name": "Electric boiler consumption sum, real-time",
+    "rows": 1030508,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "dfa2488dd1996bac21820f373e8059f2c40da4117af685e377e0710f9aee6c0c"
+  },
+  "316": {
+    "name": "FCR-N hourly procured volume",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "9979c1baf15f7e0df1da33e9ac466a53aceba1569338c285a65a139edde15223"
+  },
+  "317": {
+    "name": "FCR-N hourly price",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "0f9fe6056d88bd226ae776f1745b23948cebc46f96d40bcf9e8139d35804cc16"
+  },
+  "315": {
+    "name": "FCR-D up hourly procured volume",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "ec8bbdabd4f0cac3fe425c0070c0c91fc164e697c304dfc9d1cdc185b5c1fa65"
+  },
+  "318": {
+    "name": "FCR-D up hourly price",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "19f101010aaef4003388def48752980eb9916122fecf7816a2103b12ebf4cc50"
+  },
+  "281": {
+    "name": "FCR-D down hourly procured volume",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "ae87ac37e100a42445d5a12ef5037f7abe0e4cb65a0a4d0db811ae3ea6242ad9"
+  },
+  "283": {
+    "name": "FCR-D down hourly price",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "2ab9cd24cb8faa80e226029b7905da055a32c5cacdbec5bb327c56091fce80fc"
+  },
+  "1": {
+    "name": "aFRR up procured capacity",
+    "rows": 33700,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "d3f5fe0246f883999eaeb81992f8793360bfef5e5af2883a18979ba6d5cf4723"
+  },
+  "2": {
+    "name": "aFRR down procured capacity",
+    "rows": 33700,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "d99f8c90d58de78311f618c8d16be612bf15e906cb73e29a2b44b98e4b523fab"
+  },
+  "52": {
+    "name": "aFRR up marginal capacity price",
+    "rows": 33647,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "9b8e3f6e79e6642598dfd21bccecba33c2ed512bde77b4f6ace9c7e6b5479363"
+  },
+  "51": {
+    "name": "aFRR down marginal capacity price",
+    "rows": 33637,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "5ebae86c70c4b6462b0e5d71c0cea8dc97abcfb8b028907a3e90e0ea9f9c4991"
+  },
+  "327": {
+    "name": "mFRR capacity market up volume (hourly)",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "1956ba1ffc393577a63686bfa41a4efeeee22c090bb9d5b32fbbc92828ce4ece"
+  },
+  "329": {
+    "name": "mFRR capacity market up price (hourly)",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "a7fa8c40e857629fd5602e246ea4f0f44e59e762f699616fd9362e0875478d3a"
+  },
+  "244": {
+    "name": "mFRR up-regulation energy price (15 min)",
+    "rows": 77685,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "232b1d3a2aee1f26297204e12d613b002c67566bd12ac773b6607864583b7bd5"
+  },
+  "106": {
+    "name": "mFRR down-regulation energy price (15 min)",
+    "rows": 77663,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "58cdfd35aa49f67ce3a5d395aa1b274204bea5ddc1ce0bf29078f8a015d52f76"
+  },
+  "375": {
+    "name": "Activated mFRR balancing regulation upward sum (15 min, from 4 Mar 2025)",
+    "rows": 59543,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "8f79fbe2def55675e522034c7f6f4902441a54ef4d0dac9dee74eb52ef40d8c7"
+  },
+  "376": {
+    "name": "Activated mFRR balancing regulation downward sum (15 min, from 4 Mar 2025)",
+    "rows": 59544,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "4dad9630f487cc0cc24950e527a6e711c8b1202e955ca036f4a750621a32950d"
+  },
+  "34": {
+    "name": "Ordered up-regulations, balancing energy market FI (1 h, to 4 Mar 2025)",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "badb8301ab9ac944b32183e68e2a8642c605fe07a3b071833de191f877577e4b"
+  },
+  "33": {
+    "name": "Ordered down-regulations, balancing energy market FI (1 h, to 4 Mar 2025)",
+    "rows": 33936,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "5899cc9775c0c78bc90f78abeebd4fc1337b75fd5d16f4c53235adc4a45446b2"
+  },
+  "349": {
+    "name": "aFRR energy activation volume, up (15 min, from 12 Jun 2024)",
+    "rows": 84976,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "b5f0326021cf36edf9384ac67686b75bdcbb6080fb7a6d2ff6c9e00398731406"
+  },
+  "350": {
+    "name": "aFRR energy activation volume, down (15 min, from 12 Jun 2024)",
+    "rows": 84976,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "045444ce672b7a422b182a26ef908c0f69eb706d0a1ca02f4323978e1eeb4537"
+  },
+  "347": {
+    "name": "aFRR energy price VWAP, up (15 min)",
+    "rows": 49297,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "fdb87917dddfe5891851e8d19db3d13458b7f02e4d27c531031dfb989fdf4524"
+  },
+  "348": {
+    "name": "aFRR energy price VWAP, down (15 min)",
+    "rows": 62621,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "1d4d48a0a1aeca5d55ce0f426672da729cc1f583eacfd20329cf64c084c2b156"
+  }
+}

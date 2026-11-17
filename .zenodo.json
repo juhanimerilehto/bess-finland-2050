@@ -1,0 +1,49 @@
+{
+  "title": "Battery energy storage in Finland to 2050: a multi-method forecast of power, energy, cost and electricity use",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "description": "<p>Finland’s grid-connected battery fleet grew from about 1.0 GW at the start of 2026 to 2.1 GW in November, faster than any official outlook expected. This paper estimates its power (GW), stored energy (GWh), cost and own electricity use to 2050. Five methods are combined in a linear opinion pool: a Monte Carlo over the project queue, a logistic diffusion anchored on observed and committed stock, a free-entry equilibrium in which batteries are built until revenue per MW meets annualised cost, a top-down share of global and Nordic outlooks, and the states published by the transmission system operator. The equilibrium is calibrated on Finnish reserve, balancing and day-ahead market data for 2023–2026 and on a component cost model in which globally traded battery components follow their learning curves, while the European price premium, the cost of capital and domestic project costs vary separately; the cost model reproduces two disclosed Finnish contracts. The Base state is 4.7 GW and 11.8 GWh in 2030, 7.0 GW and 21.8 GWh in 2035, and 10.2 GW and 34.2 GWh in 2050, with a Low–High range of 4.8–21.8 GW in 2050. New systems shift from two to four hours in the mid-2030s, but eight-hour systems rarely pay, and the fleet averages 3.3 h in 2050, below the 4–8 h assumed in system planning. The erosion of battery revenue by the fleet itself and the growth of flexibility need explain most of the variance of the equilibrium, followed by the cost of capital and grid connection; global technology learning and the European premium matter little, and even free battery cells would add little capacity. Conversion losses and auxiliary consumption draw about 0.95 % of national electricity consumption. Model, data and code are released.</p><p>This record contains the paper (PDF), the model source code, parameter set, derived data, figures, test suite and the snapshot of Fingrid open data used. Code: MIT. Text, figures and data: CC BY 4.0. Repository: https://github.com/juhanimerilehto/bess-finland-2050</p>",
+  "creators": [
+    {
+      "name": "Merilehto, Juhani",
+      "affiliation": "Oulu University of Applied Sciences; University of Turku",
+      "orcid": "0000-0002-8010-3725"
+    }
+  ],
+  "keywords": [
+    "battery energy storage",
+    "BESS",
+    "Finland",
+    "scenario analysis",
+    "free entry",
+    "cannibalisation",
+    "learning curves",
+    "opinion pool",
+    "Sobol sensitivity",
+    "electricity markets",
+    "flexibility",
+    "2050"
+  ],
+  "license": "cc-by-4.0",
+  "version": "1.0.0",
+  "publication_date": "2026-11-17",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/juhanimerilehto/bess-finland-2050/tree/v1.0.0",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.24106473",
+      "relation": "references",
+      "resource_type": "publication-report"
+    },
+    {
+      "identifier": "10.5281/zenodo.24014826",
+      "relation": "references",
+      "resource_type": "publication-report"
+    }
+  ],
+  "notes": "Part of the Electric markets 2050 series. Evidence cutoff 15 November 2026. Day-ahead prices are not redistributed; they are retrieved from the ENTSO-E Transparency Platform with the included script and checked against the SHA-256 manifest in data/raw/entsoe_manifest.json."
+}

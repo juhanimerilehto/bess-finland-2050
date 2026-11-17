@@ -1,0 +1,325 @@
+{
+  "_note": "External comparison data for the paper (17 Nov 2026). Sources and grades in reports/BESS cost learning and forecast record.md and reports/Global BESS outlook to 2050.md. EUR conversions use USD 1.08 (2024) and 1.13 (2025) per EUR and a 2022->2024 USD inflation factor of 1.07 (assumptions, derived).",
+  "cost_projections_eur_per_kwh_4h": {
+    "NREL 2025 update, low (US, all-in)": {
+      "scope": "all-in",
+      "points": {
+        "2024": 309,
+        "2030": 192,
+        "2035": 136,
+        "2040": 124,
+        "2050": 100
+      }
+    },
+    "NREL 2025 update, mid (US, all-in)": {
+      "scope": "all-in",
+      "points": {
+        "2024": 309,
+        "2025": 297,
+        "2030": 258,
+        "2035": 225,
+        "2040": 205,
+        "2050": 165
+      }
+    },
+    "NREL 2025 update, high (US, all-in)": {
+      "scope": "all-in",
+      "points": {
+        "2024": 309,
+        "2030": 328,
+        "2035": 314,
+        "2040": 305,
+        "2050": 284
+      }
+    },
+    "NREL 2023 update, mid (US, all-in)": {
+      "scope": "all-in",
+      "points": {
+        "2025": 385,
+        "2030": 323,
+        "2050": 224
+      }
+    },
+    "DEA 2018/19 via PyPSA (excl. grid)": {
+      "scope": "excl. grid",
+      "points": {
+        "2025": 322,
+        "2030": 243,
+        "2035": 201,
+        "2040": 159,
+        "2050": 120
+      }
+    },
+    "BNEF Europe turnkey (excl. EPC, grid)": {
+      "scope": "turnkey",
+      "points": {
+        "2024": 255,
+        "2025": 157,
+        "2035": 89
+      }
+    },
+    "BNEF China turnkey (excl. EPC, grid)": {
+      "scope": "turnkey",
+      "points": {
+        "2024": 94,
+        "2025": 65,
+        "2035": 36
+      }
+    },
+    "DEA May 2025 (small unit, excl. grid)": {
+      "scope": "excl. TSO grid connection; 3 MWh reference unit",
+      "points": {
+        "2025": 324,
+        "2030": 263,
+        "2035": 248,
+        "2040": 235,
+        "2050": 234
+      }
+    }
+  },
+  "observed_eur_per_kwh": [
+    {
+      "label": "Germany 4 h, all-in (Modo, 2026)",
+      "year": 2026,
+      "value": 234
+    },
+    {
+      "label": "Australia 4 h, all-in (CSIRO GenCost 2025-26)",
+      "year": 2025.6,
+      "value": 216
+    },
+    {
+      "label": "Finland 2.2 h, integrator order (Exilion/Merus)",
+      "year": 2025.4,
+      "value": 258
+    },
+    {
+      "label": "Italy MACSE 4 h+, implied all-in (Ember)",
+      "year": 2025.8,
+      "value": 106
+    },
+    {
+      "label": "Ex-China/US 4 h+, all-in (Ember)",
+      "year": 2025.8,
+      "value": 111
+    },
+    {
+      "label": "China EPC, 4 h (CNESA/EnergyTrend)",
+      "year": 2026.5,
+      "value": 112
+    },
+    {
+      "label": "US 4 h, all-in (NREL)",
+      "year": 2024,
+      "value": 309
+    }
+  ],
+  "index_benchmarks": {
+    "NREL 2025 low": {
+      "2025": 1.0,
+      "2030": 0.62,
+      "2035": 0.44,
+      "2040": 0.4,
+      "2050": 0.32
+    },
+    "NREL 2025 mid": {
+      "2025": 1.0,
+      "2030": 0.84,
+      "2035": 0.73,
+      "2040": 0.66,
+      "2050": 0.53
+    },
+    "NREL 2025 high": {
+      "2025": 1.0,
+      "2030": 1.06,
+      "2035": 1.02,
+      "2040": 0.99,
+      "2050": 0.92
+    },
+    "DEA 2018/19 via PyPSA": {
+      "2025": 1.0,
+      "2030": 0.75,
+      "2035": 0.62,
+      "2040": 0.49,
+      "2050": 0.37
+    },
+    "Kroon et al. 2026 cells (2050 range)": {
+      "2050": [
+        0.18,
+        0.33
+      ]
+    },
+    "BNEF 2035 4 h turnkey, Europe / China": {
+      "2035": [
+        0.61,
+        0.56
+      ]
+    },
+    "DEA May 2025": {
+      "2025": 1.0,
+      "2030": 0.812,
+      "2035": 0.765,
+      "2040": 0.725,
+      "2050": 0.722
+    }
+  },
+  "finland_deployment_vintages": [
+    {
+      "source": "ENTSO-E ERAA 2023 (all Nordics)",
+      "published": 2024.0,
+      "year": 2030,
+      "gw": [
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "source": "Expert elicitation (Borenius et al., elicited 2024)",
+      "published": 2025.2,
+      "year": 2035,
+      "gw": [
+        1.0,
+        1.6
+      ]
+    },
+    {
+      "source": "Fingrid vision 2023",
+      "published": 2023.5,
+      "year": 2035,
+      "gw": [
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "source": "Fingrid vision 2023",
+      "published": 2023.5,
+      "year": 2045,
+      "gw": [
+        1.0,
+        6.0
+      ]
+    },
+    {
+      "source": "Aurora (via Solarplaza)",
+      "published": 2026.6,
+      "year": 2028,
+      "gw": [
+        1.75,
+        1.75
+      ]
+    },
+    {
+      "source": "Fingrid vision 2025",
+      "published": 2025.8,
+      "year": 2040,
+      "gw": [
+        2.0,
+        31.0
+      ]
+    },
+    {
+      "source": "Fingrid Q3/2026",
+      "published": 2026.7,
+      "year": 2030,
+      "gw": [
+        4.0,
+        5.0
+      ]
+    },
+    {
+      "source": "Fingrid Q3/2026",
+      "published": 2026.7,
+      "year": 2035,
+      "gw": [
+        6.0,
+        9.0
+      ]
+    },
+    {
+      "source": "Market review (Merilehto 2026)",
+      "published": 2026.75,
+      "year": 2028,
+      "gw": [
+        3.9,
+        4.44
+      ]
+    }
+  ],
+  "regions_now": [
+    {
+      "region": "Finland",
+      "gw": 2.09,
+      "pop_m": 5.6,
+      "when": "Nov 2026",
+      "duration_h": "1.9 (fleet); 2.8 (under construction)"
+    },
+    {
+      "region": "Lithuania",
+      "gw": 1.195,
+      "pop_m": 2.9,
+      "when": "Oct 2026",
+      "duration_h": "1.9"
+    },
+    {
+      "region": "United States (utility-scale)",
+      "gw": 52.0,
+      "pop_m": 340,
+      "when": "mid-2026",
+      "duration_h": "2.7 (2025 additions, all segments)"
+    },
+    {
+      "region": "Italy",
+      "gw": 7.4,
+      "pop_m": 59,
+      "when": "2026",
+      "duration_h": "2.4"
+    },
+    {
+      "region": "China (new-type storage)",
+      "gw": 168.3,
+      "pop_m": 1410,
+      "when": "June 2026",
+      "duration_h": "2.6 (2025 additions); 2.7 (H1 2026)"
+    },
+    {
+      "region": "Sweden",
+      "gw": 1.0,
+      "pop_m": 10.6,
+      "when": "2025",
+      "duration_h": "mostly 1"
+    },
+    {
+      "region": "World",
+      "gw": 455,
+      "pop_m": 8200,
+      "when": "end-2026 (est.)",
+      "duration_h": "2.7 (2025 additions)"
+    }
+  ],
+  "regions_2050": [
+    {
+      "region": "World, BNEF NEO 2026 ETS",
+      "gw": 3844,
+      "pop_m": 9700
+    },
+    {
+      "region": "World, IRENA 1.5 C",
+      "gw": 4100,
+      "pop_m": 9700
+    },
+    {
+      "region": "Denmark, DEA AF25",
+      "gw": 6.8,
+      "pop_m": 6.0
+    },
+    {
+      "region": "Sweden, Svk LMA2026 (secondary)",
+      "gw_range": [
+        8.3,
+        9.4
+      ],
+      "pop_m": 10.6
+    }
+  ]
+}

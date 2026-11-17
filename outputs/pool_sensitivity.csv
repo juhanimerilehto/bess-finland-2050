@@ -1,0 +1,5 @@
+variant,low_2035,base_2035,high_2035,low_2050,base_2050,high_2050,m4_p50_2050
+Central pool,3.62731,7.03853,11.8784,4.7824,10.1798,21.7583,8.10394
+M4 peers scaled by electricity consumption,4.27695,7.03853,11.8784,5.5641,11.4409,21.7583,14.196
+M4 peers half by population and half by consumption,4.06128,7.03853,11.8784,5.33408,10.8483,21.7583,12.9138
+Equal weights for M2 and M5 after 2040,3.62731,7.03853,11.8784,4.89292,10.4621,27.32,8.10394

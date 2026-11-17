@@ -1,0 +1,63 @@
+{
+  "_source": "Danish Energy Agency, Technology Data for Energy Storage, datasheet version 0011, sheet '180 Lithium Ion Battery' (chapter updated May 2025). Workbook: https://ens.dk/media/6589/download (not redistributed)",
+  "_money": "EUR2020 in the sheet (2024 prices deflated by 0.84, HICP); converted to EUR2025 with factor 1.217 (2020->2024 = 1/0.84, 2024->2025 ~ +2.2%, assumption)",
+  "_reference_unit": "one 20-ft container, 3 MWh / 1.5 MW in 2025 (C-rate 0.5 rising to 2.0 by 2050); other project costs include construction, site cabling and contractor work",
+  "raw_eur2020": {
+    "energy_meur_per_mwh": {
+      "2025": 0.095,
+      "2030": 0.065,
+      "2035": 0.055,
+      "2040": 0.055,
+      "2050": 0.054
+    },
+    "power_meur_per_mw": {
+      "2025": 0.086,
+      "2030": 0.084,
+      "2035": 0.074,
+      "2040": 0.073,
+      "2050": 0.072
+    },
+    "other_project_meur_per_mwh": {
+      "2025": 0.15,
+      "2030": 0.13,
+      "2035": 0.13,
+      "2040": 0.12,
+      "2050": 0.12
+    },
+    "rte_ac_pct": {
+      "2025": 91,
+      "2030": 91,
+      "2035": 92,
+      "2040": 92,
+      "2050": 92
+    },
+    "technical_lifetime_yr": {
+      "2025": 15,
+      "2030": 20,
+      "2035": 25,
+      "2040": 30,
+      "2050": 30
+    },
+    "cycle_life": {
+      "2025": 5000,
+      "2030": 6000,
+      "2035": 8000,
+      "2040": 12000,
+      "2050": 20000
+    }
+  },
+  "four_hour_eur2025_per_kwh": {
+    "2025": 324,
+    "2030": 263,
+    "2035": 248,
+    "2040": 235,
+    "2050": 234
+  },
+  "energy_component_eur2025_per_kwh": {
+    "2025": 115.6,
+    "2030": 79.1,
+    "2035": 66.9,
+    "2040": 66.9,
+    "2050": 65.7
+  }
+}

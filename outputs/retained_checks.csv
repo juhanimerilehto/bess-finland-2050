@@ -1,0 +1,16 @@
+quantity,reproduced,published_or_note
+chart total 2027 (MW),3940,3940
+chart total 2028 (MW),4440,4440
+text: operating+FID end-2027 (MW),3600,3600
+text: operating+FID end-2028 (MW),3900,3900
+Aug-2026 stock duration (h),1.875,~1.9
+Aug-2026 energy as minutes of average load,18.5506,20
+operating+FID 2028 / Fingrid Moderate 2030,0.975,~1 ('about 4 GW')
+Fingrid High 2035 energy range at 4-8 h (GWh),36-72,-
+Implied average duration for ~50 GWh (h),5.55556,within 4-8
+Fingrid moderate 2030: GWh at 4 h / 8 h,16 / 32,-
+Fingrid high 2030: GWh at 4 h / 8 h,20 / 40,-
+Fingrid moderate 2035: GWh at 4 h / 8 h,24 / 48,-
+Fingrid high 2035: GWh at 4 h / 8 h,36 / 72,-
+reserve pool / revenue per MW at 2026 levels (GW),0.86-1.72,-
+reserve pool / revenue per MW at 2023-24 levels (GW),0.20-0.49,-

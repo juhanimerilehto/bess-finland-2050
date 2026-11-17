@@ -1,0 +1,29 @@
+# secrets
+.env
+*.env
+
+# market data: not in the public repository (see data/README.md)
+data/raw/*
+!data/raw/*_manifest.json
+data/inputs/*.docx
+
+# python
+__pycache__/
+*.pyc
+
+# latex build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# local working notes
+/research/
+paper/*.md
+dist/
+Claude outputs/
+outputs/baseline_v020/

@@ -1,0 +1,15 @@
+{
+  "imb": {
+    "file": "entsoe_imb_FI.csv",
+    "rows": 251320,
+    "start": "2023-01-01",
+    "end": "2026-11-15",
+    "sha256": "a1f421059d71ad26a3a336ca8e748c4f8ab308f07940a4a8784e449f76914258"
+  },
+  "da": {
+    "file": "entsoe_da_FI.csv",
+    "rows": 63555,
+    "sha256": "8122b69be2e794f8a126378e6cd249f601667cd2302317fd0845b23d03cec47e",
+    "note": "backfilled"
+  }
+}

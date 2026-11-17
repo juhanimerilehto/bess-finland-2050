@@ -1,0 +1,889 @@
+{
+  "_meta": {
+    "model": "bess-fi-2050",
+    "version": "1.0.0",
+    "currency": "EUR (2025 prices) unless stated",
+    "evidence_classes": "M measured, V vendor/manufacturer, S official statistic, F institutional forecast, B benchmark, A assumption",
+    "cutoff": "2026-11-15",
+    "released": "2026-11-17",
+    "doi": "10.5281/zenodo.24322467"
+  },
+  "retained_blog": {
+    "_source": "Merilehto (2026a), Gasum blog, 5 Oct 2026; BESS chart and text (https://www.gasum.com/fi/uutiset-ja-asiakastarinat/blogit/2026/suomen-sahkomarkkinan-jalkiteollinen-vallankumous--datakeskusten-tulo-vaatii-joustoa-muilta-markkinatoimijoilta/)",
+    "operating_aug2026_mw": 1600,
+    "operating_aug2026_mwh": 3000,
+    "pipeline": {
+      "2027": {
+        "operating": 1600,
+        "fid": 2000,
+        "planning": 340
+      },
+      "2028": {
+        "operating": 1600,
+        "fid": 2300,
+        "planning": 540
+      }
+    },
+    "text_fid_stock_mw": {
+      "2027": 3600,
+      "2028": 3900
+    },
+    "fingrid_states_mw": {
+      "2030": {
+        "moderate": 4000,
+        "high": 5000
+      },
+      "2035": {
+        "moderate": 6000,
+        "high": 9000
+      }
+    },
+    "cycle_cost_eur_per_mwh": [
+      15,
+      30
+    ],
+    "minutes_of_average_load": 20,
+    "consumption_2025_twh": 85.0
+  },
+  "fingrid_q3_2026": {
+    "_source": "Fingrid (2026), Prospects Q3/2026, p.13",
+    "class": "F",
+    "existing_mwh_per_mw": [
+      1,
+      3
+    ],
+    "scenario_mwh_per_mw": [
+      4,
+      8
+    ],
+    "high_2035_gwh_approx": 50
+  },
+  "reserve_pool": {
+    "_source": "Fingrid reserve market day 2026 (procurement cost 2025); Emaldo/Clean Horizon (revenue per MW)",
+    "procurement_cost_2025_meur": {
+      "value": 172,
+      "class": "S"
+    },
+    "bess_revenue_keur_per_mw_yr_2026": {
+      "low": 100,
+      "high": 200,
+      "class": "V"
+    },
+    "bess_revenue_keur_per_mw_yr_2023_24": {
+      "low": 350,
+      "high": 850,
+      "class": "V"
+    }
+  },
+  "fx": {
+    "usd_per_eur_2025": {
+      "value": 1.13,
+      "class": "S",
+      "source": "Bank of Finland, average annual exchange rates 2025"
+    }
+  },
+  "cost_anchor_2025": {
+    "_source": "BNEF Energy Storage System Cost Survey 2025 via Energy-Storage.news (16 Dec 2025)",
+    "global_turnkey_avg_usd_per_kwh": {
+      "value": 117,
+      "class": "B"
+    },
+    "global_turnkey_2h_usd_per_kwh": {
+      "value": 124,
+      "class": "B"
+    },
+    "global_turnkey_4h_usd_per_kwh": {
+      "value": 110,
+      "class": "B"
+    },
+    "europe_turnkey_avg_usd_per_kwh": {
+      "value": 177,
+      "class": "B"
+    },
+    "europe_turnkey_4h_2035_usd_per_kwh": {
+      "value": 101,
+      "class": "F"
+    },
+    "europe_yoy_decline_2025": {
+      "value": 0.37,
+      "class": "B",
+      "note": "Europe system cost fell 37% y/y in 2025; used only to back-cast 2024 for validation"
+    }
+  },
+  "cost_structure": {
+    "bop_install_share": {
+      "low": 0.0,
+      "central": 0.15,
+      "high": 0.25,
+      "unit": "fraction of equipment capex",
+      "class": "A",
+      "note": "Installation/EPC/BoP uplift on turnkey equipment. Low = 0 covers the case that the BNEF turnkey figure already includes it. Anchored to Ember (2025): ~$75/kWh equipment + ~$50/kWh installation and connection for 4 h+."
+    },
+    "grid_connection_eur_per_kw": {
+      "low": 100,
+      "central": 150,
+      "high": 250,
+      "unit": "EUR/kW",
+      "class": "A",
+      "note": "Ember 2025: grid connection USD 30-100/kWh at 4 h; DEA: PCS + connection EUR 0.4-0.5 M/MW. Flat in real terms."
+    },
+    "fixed_om_share": {
+      "low": 0.01,
+      "central": 0.02,
+      "high": 0.03,
+      "unit": "fraction of equipment capex per year",
+      "class": "A"
+    },
+    "tso_storage_fee_eur_per_kw_yr": {
+      "value": 1.137,
+      "class": "S",
+      "source": "Fingrid 2026 energy storage capacity fee 1,137 EUR/MW/a (>1 MW)"
+    },
+    "wacc": {
+      "low": 0.05,
+      "central": 0.07,
+      "high": 0.1,
+      "class": "A"
+    },
+    "economic_life_yr": {
+      "low": 15,
+      "central": 20,
+      "high": 25,
+      "class": "A",
+      "note": "Vendor warranties up to 20 yr (Megapack 3), Fluence 25-yr service guarantee; Lazard 20 yr with augmentation; NREL ATB 15 yr (with augmentation in FOM). Low = short life (high cost)."
+    },
+    "connection_cost_drift_per_yr": {
+      "low": 0.0,
+      "central": 0.0,
+      "high": 0.0,
+      "class": "A",
+      "note": "Grid connection and civil works are assumed not to follow battery learning."
+    }
+  },
+  "learning": {
+    "method_A_exogenous": {
+      "_source": "BNEF (2025) Europe 4 h 2035 forecast for 2025-2035; NREL (2025) low/mid/high ratios thereafter",
+      "class": "F",
+      "index_2035": {
+        "low": 0.44,
+        "central": 0.607,
+        "high": 1.01
+      },
+      "index_2050": {
+        "low": 0.32,
+        "central": 0.445,
+        "high": 0.92
+      },
+      "note": "Central 2035 = 101 / (Europe 4 h 2025); central 2050 = central 2035 x NREL mid 178/234. Low/high = NREL low/high relative to the 2024 baseline 334 $/kWh.",
+      "note_2050": "Central 2050 = BNEF 2035 index x NREL 2025 mid ratio 178/243 (NREL Table 2; its Section 3 text gives 234). Kept as a comparison path; the model uses method C."
+    },
+    "method_B_experience": {
+      "_source": "Ziegler & Trancik (2021); Our World in Data (2026); Schmidt et al. (2017)",
+      "learning_rate": {
+        "low": 0.14,
+        "central": 0.19,
+        "high": 0.24,
+        "class": "M"
+      },
+      "doublings_2025_2035": {
+        "low": 3.0,
+        "central": 3.3,
+        "high": 3.7,
+        "class": "A",
+        "note": "Doublings of cumulative global Li-ion output from end-2025 (4.7 TWh; secondary compilation + Benchmark 2025 demand), IEA GEVO 2026 CPS/STEPS/NZE-type outlooks; derived"
+      },
+      "doublings_2025_2050": {
+        "low": 4.65,
+        "central": 5.1,
+        "high": 5.6,
+        "class": "A",
+        "note": "2040-2050 demand outlooks unsourced; assumption"
+      },
+      "note": "Single-index Wright's law applied to cells only (comparison path)."
+    },
+    "method_C_component": {
+      "_source": "This study, calibrated in model/research/component_calibration_reference.py. Reproduces BNEF Dec 2025 2035 4 h turnkey for Europe (USD 101) and China (USD 41).",
+      "class": "M/B/F/A",
+      "cell_2025_eur_per_kwh": {
+        "value": 36,
+        "class": "B",
+        "source": "LFP storage cells EXW China late 2025 (Ember 2025; BNEF lowest LFP cell USD 36/kWh)"
+      },
+      "freight_duty_eur_per_kwh": {
+        "value": 7,
+        "class": "B",
+        "source": "Benchmark Q3 2026: EXW USD 53-58 vs CIF Europe USD 63-67/kWh; EU duty 0-2.7%"
+      },
+      "dc_bos_2025_eur_per_kwh": {
+        "value": 16,
+        "class": "A",
+        "source": "racks, BMS, thermal, enclosure; NREL 2025 cabinet split"
+      },
+      "cell_learning_rate": {
+        "low": 0.21,
+        "central": 0.18,
+        "high": 0.15,
+        "class": "M",
+        "source": "Ziegler & Trancik 2021 (18.9-20.4%)"
+      },
+      "bos_pcs_learning_rate": {
+        "low": 0.15,
+        "central": 0.12,
+        "high": 0.08,
+        "class": "B/A",
+        "source": "NREL 2025 implied ~8% (PCS), ~12% (cabinets); Schmidt et al. 16+-3% utility systems"
+      },
+      "doublings_all_liion": {
+        "low": {
+          "2025": 0,
+          "2030": 2.4,
+          "2035": 3.7,
+          "2040": 4.6,
+          "2050": 5.6
+        },
+        "central": {
+          "2025": 0,
+          "2030": 2.1,
+          "2035": 3.3,
+          "2040": 4.1,
+          "2050": 5.1
+        },
+        "high": {
+          "2025": 0,
+          "2030": 1.9,
+          "2035": 3.0,
+          "2040": 3.7,
+          "2050": 4.65
+        },
+        "class": "A (derived)"
+      },
+      "doublings_stationary": {
+        "2025": 0,
+        "2030": 2.6,
+        "2035": 3.8,
+        "2040": 4.6,
+        "2050": 5.6,
+        "class": "A (derived)"
+      },
+      "cell_floor_eur_per_kwh": {
+        "low": 12,
+        "central": 18,
+        "high": 28,
+        "class": "A",
+        "source": "LFP cathode incl. Li 42-46% of cell cost (SMM); assumption"
+      },
+      "cell_cycle_premium_high_2030": {
+        "value": 0.2,
+        "class": "A",
+        "note": "lithium-cycle premium on cells in the high-cost case, peaking 2030, zero at 2025 and 2035"
+      },
+      "premium_decline_to_2035": {
+        "low": 0.1,
+        "central": 0.05,
+        "high": 0.02,
+        "class": "F/A",
+        "source": "central matches BNEF's implied Europe-China gap USD 104 -> ~60/kWh by 2035"
+      },
+      "premium_decline_after_2035": {
+        "low": 0.03,
+        "central": 0.02,
+        "high": 0.01,
+        "class": "A"
+      },
+      "near_term_index": {
+        "2026": {
+          "low": 0.95,
+          "central": 1.0,
+          "high": 1.1
+        },
+        "2027": {
+          "low": 0.9,
+          "central": 0.97,
+          "high": 1.08
+        },
+        "class": "M/A",
+        "source": "China system prices +10-25% in 2026 (CNESA, EnergyTrend); export VAT rebate 13% -> 6% (Apr 2026) -> 0% (Jan 2027)"
+      },
+      "install_decay_per_yr": {
+        "low": -0.02,
+        "central": -0.01,
+        "high": 0.0,
+        "class": "A",
+        "note": "installation/EPC as an absolute cost (share of 2025 equipment), not scaled by learning"
+      },
+      "augmentation_share": {
+        "2025": {
+          "low": 0.05,
+          "central": 0.15,
+          "high": 0.2
+        },
+        "2030": {
+          "low": 0.05,
+          "central": 0.12,
+          "high": 0.18
+        },
+        "2035": {
+          "low": 0.05,
+          "central": 0.1,
+          "high": 0.15
+        },
+        "2040": {
+          "low": 0.03,
+          "central": 0.08,
+          "high": 0.12
+        },
+        "2050": {
+          "low": 0.025,
+          "central": 0.05,
+          "high": 0.1
+        },
+        "class": "B/A",
+        "source": "industry practice 15-20% initial overbuild or augmentation in years 5-7; required with a 20-year economic life"
+      },
+      "cell_cost_multiplier_after_2030": {
+        "value": 1.0,
+        "class": "A",
+        "note": "1.0 in all reported states; used by stress cases for a cheaper post-LFP chemistry (0.5) and a bound with free cells (0)"
+      }
+    }
+  },
+  "operation": {
+    "rte": {
+      "low": 0.82,
+      "central": 0.85,
+      "high": 0.89,
+      "class": "B/A",
+      "source": "PNNL 2022 (82.6% at transformer 2021, 84.5% 2030); NREL 2025 85%; Lazard 86-92%",
+      "gain_pp": {
+        "2025": 0,
+        "2035": 2,
+        "2050": 3
+      }
+    },
+    "dod": {
+      "low": 0.8,
+      "central": 0.9,
+      "high": 0.95,
+      "class": "A",
+      "source": "Lazard 90%"
+    },
+    "cycle_life": {
+      "low": 4000,
+      "central": 6000,
+      "high": 15000,
+      "unit": "full equivalent cycles (2025 vintage)",
+      "class": "V/B/A",
+      "path": {
+        "2025": [
+          6000,
+          8000,
+          12000
+        ],
+        "2030": [
+          7000,
+          10000,
+          13500
+        ],
+        "2035": [
+          8000,
+          12000,
+          15000
+        ],
+        "2040": [
+          9000,
+          13000,
+          17000
+        ],
+        "2050": [
+          10000,
+          15000,
+          20000
+        ]
+      },
+      "note": "Full cycles to 70-80% SoH. PNNL 2022 warranty baseline 10,000 cycles at 80% DoD (~8,000 FEC); Megapack 3 >=10,000; CATL/HiTHIUM >10,000 claimed (V). Field fade 2-3%/yr (Figgener et al. 2024; Andreotti et al. 2026)."
+    },
+    "replacement_cost_eur_per_kwh_2025": {
+      "low": 50,
+      "central": 70,
+      "high": 110,
+      "class": "B/A",
+      "note": "DC block / pack replacement. BNEF 2025 stationary pack $70/kWh (=62 EUR); Europe packs ~56% above China."
+    },
+    "charge_price_eur_per_mwh": {
+      "low": 30,
+      "central": 45,
+      "high": 60,
+      "class": "A",
+      "note": "Average price paid for charging energy; set by the market module later."
+    },
+    "aux_kw_per_mwh": {
+      "low": 0.9,
+      "central": 1.8,
+      "high": 3.3,
+      "class": "B/A",
+      "path_factor": {
+        "2025": 1.0,
+        "2035": 0.85,
+        "2050": 0.72
+      },
+      "source": "Enertis/ESN design figure 1.7 kW/MWh (central anchor); Dimovski et al. 2026 Italian air-cooled plant 3.3 kW/MWh (high); 4% of throughput at ~200 cycles/yr = 0.9 kW/MWh (low); liquid-cooled 5 MWh block 2.2-4.4 kW/MWh in winter (OEM). No Nordic field measurement.",
+      "note": "Revised 17 Nov 2026 from 2.5 (1.5-4.5); declines with vintage (thermal design)."
+    }
+  },
+  "validation_projects": {
+    "_note": "Disclosed Finnish contract values used as out-of-fit checks, not as calibration targets.",
+    "mertaniemi": {
+      "mw": 38,
+      "mwh": 43,
+      "meur": 15.0,
+      "contract_year": 2024,
+      "boundary": "EPC/turnkey supply incl. installation and commissioning; owner costs (grid connection) not included",
+      "class": "M",
+      "source": "Merus Power release via Inderes, 16 May 2025"
+    },
+    "tervola_varevaara": {
+      "mw": 20,
+      "mwh": 41,
+      "meur_min": 8.0,
+      "contract_year": 2026,
+      "boundary": "Battery system + hybrid controller + maintenance/lifecycle services; 'over 8 MEUR'",
+      "class": "M",
+      "source": "Inderes analyst comment, 1 July 2026"
+    }
+  },
+  "forecast": {
+    "_note": "Inputs for the five forecast methods. Triangular parameters are [low, mode, high]. Units GW unless stated.",
+    "start": {
+      "date": 2026.87,
+      "stock_gw": 2.092,
+      "stock_gwh": 3.97,
+      "class": "S",
+      "note": "Fingrid 424, 14 Nov 2026; GWh assumes 1.9 h fleet average (blog: ~3 GWh at 1.6 GW in Aug 2026)"
+    },
+    "observed_2026": {
+      "_source": "Fingrid Q3/2026 text (Jan ~1.0 GW) and Fingrid open data 424 (monthly max, >1 MW units)",
+      "points": [
+        [
+          2026.0,
+          1.0
+        ],
+        [
+          2026.21,
+          1.269
+        ],
+        [
+          2026.29,
+          1.284
+        ],
+        [
+          2026.37,
+          1.427
+        ],
+        [
+          2026.46,
+          1.614
+        ],
+        [
+          2026.54,
+          1.614
+        ],
+        [
+          2026.62,
+          1.848
+        ],
+        [
+          2026.71,
+          2.013
+        ],
+        [
+          2026.79,
+          2.085
+        ],
+        [
+          2026.87,
+          2.092
+        ]
+      ]
+    },
+    "m1_pipeline": {
+      "_source": "Blog (Merilehto 2026a): operating+FID 3.9 GW by end-2028; Renewables Finland (9 Sep 2026): 0.995 GW / 2.8 GWh under construction, ~1.7 GW permitted, 11.9 GW / 36 GWh planned in total",
+      "stages": {
+        "fid_remaining": {
+          "gw": 1.808,
+          "duration_h": 2.8,
+          "p": [
+            0.85,
+            0.95,
+            1.0
+          ],
+          "cod_years": [
+            2027,
+            2028
+          ],
+          "cod_weights": [
+            0.6,
+            0.4
+          ],
+          "note": "3.9 GW (blog, operating+FID end-2028) minus 2.092 GW operating",
+          "cod_note": "Schedule implied by blog text: (3.6-2.092)/1.808 = 0.83 in 2027, 0.17 in 2028; with ~25-30% of capacity slipping one year (A) this gives the 0.6/0.4 used here."
+        },
+        "permitted_net": {
+          "gw": 0.887,
+          "duration_h": 2.8,
+          "p": [
+            0.3,
+            0.5,
+            0.7
+          ],
+          "cod_years": [
+            2028,
+            2029,
+            2030
+          ],
+          "cod_weights": [
+            0.3,
+            0.4,
+            0.3
+          ],
+          "note": "1.7 GW permitted minus FID projects not yet under construction (0.813 GW) to avoid double counting"
+        },
+        "planned_early": {
+          "gw": 9.205,
+          "duration_h": 3.0,
+          "p": [
+            0.05,
+            0.15,
+            0.3
+          ],
+          "cod_years": [
+            2029,
+            2030,
+            2031,
+            2032
+          ],
+          "cod_weights": [
+            0.2,
+            0.3,
+            0.3,
+            0.2
+          ],
+          "note": "11.9 - 0.995 - 1.7 GW; 36 GWh / 11.9 GW = 3.0 h"
+        }
+      },
+      "class": "V/S/A"
+    },
+    "m3_equilibrium": {
+      "capture": [
+        0.75,
+        0.85,
+        0.95
+      ],
+      "eps_own": [
+        0.3,
+        0.8,
+        1.2
+      ],
+      "eps_flex": [
+        0.3,
+        0.8,
+        1.5
+      ],
+      "pool_meur_2026": 124.7,
+      "eps_pool": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "pool_share": [
+        0.3,
+        0.5,
+        0.8
+      ],
+      "consumption_twh": {
+        "2026": 88.0,
+        "2035": [
+          110,
+          136,
+          162
+        ],
+        "2050": [
+          134,
+          155,
+          200
+        ]
+      },
+      "vre_share_mult_2050": [
+        1.0,
+        1.3,
+        1.6
+      ],
+      "build_limit_gw_yr": [
+        0.6,
+        1.2,
+        2.5
+      ],
+      "cap_gw": 31.0,
+      "durations_h": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "phes": {
+        "options_gw": [
+          0.0,
+          0.55,
+          1.05
+        ],
+        "probs": [
+          0.3,
+          0.4,
+          0.3
+        ],
+        "online": {
+          "0.55": 2033,
+          "1.05": 2036
+        }
+      },
+      "grid_forming_2050_gw": [
+        0.0,
+        0.8,
+        3.0
+      ],
+      "grid_forming_cannibal_weight": 0.5,
+      "life_mean_yr": {
+        "2025": 15,
+        "2050": 20
+      },
+      "weibull_shape": 3.0,
+      "sources": {
+        "eps_own": "Savelli 2026 (Energy J.): +10% BESS -> -8% profit; Spain 2026 (Energy Reports): -54% spread at 30 GWh",
+        "eps_flex": "Savelli 2026: +10% RES -> +15% BESS profit (2030), fading by 2040; Dumitrescu et al. 2024",
+        "pool": "this study, reserves + balancing energy 2026 annualised (reserves.py, balancing.py)",
+        "consumption": "Fingrid Q3/2026 (2035: 110-162 TWh); Long-term Climate Plan (2050: 134-180 TWh); upper tail to 200 TWh for data-centre growth",
+        "cap": "Fingrid vision 2040 maximum (31 GW) ~ storage connection enquiries (>30 GW)"
+      },
+      "class": "A (anchored as listed)",
+      "pool_eligibility_by_duration": {
+        "1": 0.4,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0
+      },
+      "pool_eligibility_note": "FCR-N needs 1 h each direction with 34% reservation and FCR-D a 20% reservation (Nordic TSOs 2025); Fingrid LER/NON-LER split at 2 h (reserve market day 2026); a 1 h unit is limited to FFR/FCR-D and part of aFRR/mFRR.",
+      "committed": {
+        "gw": 1.808,
+        "duration_h": 2.8,
+        "cod": {
+          "2027": 0.6,
+          "2028": 0.4
+        },
+        "note": "Blog: operating + FID 3.9 GW by end-2028 minus 2.092 GW operating (Nov 2026). Built regardless of the equilibrium (decisions taken)."
+      },
+      "duration_tilt": [
+        0.0,
+        0.15,
+        0.3
+      ],
+      "duration_tilt_note": "Margin growth exponent for duration d is eps_flex x (1 + tilt x log2(d/2)): longer durations gain more from VRE/demand growth (multi-hour spreads). Anchors: Fingrid Q3/2026 4-8 MWh/MW; Danish Energy Agency AF25 2 h -> 6 h by 2050; Landy et al. 2026 4 h optimal (UK). Range includes 0 (no tilt). Class A.",
+      "grid_forming_duration_h": 1.0,
+      "grid_forming_note": "Co-located grid-forming BESS required for weak-grid wind/solar (Fingrid VJV2024: +-10-30% of plant capacity where ESCR<1). 0 / 0.8 / 3.0 GW by 2050 (A), ramped linearly from 2026; added to the stock at 1 h; compete with market batteries at weight 0.5.",
+      "eps_pool_sat": [
+        0.2,
+        0.5,
+        0.9
+      ],
+      "eps_pool_sat_note": "Elasticity of the euro size of the reserve and balancing pool to the flexible fleet (batteries plus competing capacity), for given flexibility need. Evidence: hourly reserve-capacity cost fell 71% (2023-26) while battery capacity grew about fivefold; the combined pool fell 47% in 2026 as the fleet doubled (both also reflect demand growth). Class M/A.",
+      "warranty_min_life_yr": 10,
+      "warranty_note": "No retirement before 10 years (typical product warranty 10-20 yr); Weibull after, with mean life 15 -> 20 yr. Class V/A.",
+      "cannibal_basis": "power",
+      "cannibal_basis_note": "'power': arbitrage cannibalisation by fleet GW (central, matches the capacity elasticity of Savelli 2026); 'energy': by GWh, a stress case."
+    },
+    "m4_topdown": {
+      "global_gw": {
+        "2030": [
+          900,
+          1050,
+          1200
+        ],
+        "2035": [
+          1400,
+          2000,
+          2900
+        ],
+        "2040": [
+          2300,
+          2800,
+          3400
+        ],
+        "2050": [
+          3800,
+          3950,
+          4100
+        ],
+        "_source": "IEA WEO 2025 STEPS ~900 GW 2030 (secondary); BNEF ~1,200 GW 2030; IEA CPS/STEPS/NZE 1.4/1.7/2.9 TW 2035; BNEF NEO 2026 2.0 TW 2035, 3.84 TW 2050; IRENA 1.5C 4.1 TW 2050; 2040 interpolated (A)"
+      },
+      "fi_share_now": 0.0046,
+      "fi_share_2050": [
+        0.0025,
+        0.0035,
+        0.005
+      ],
+      "share_note": "Now: 2.09 GW / ~455 GW global end-2026 (end-2025 ~275 GW + 2026 additions ~180 GW, BNEF). Electricity share 0.30% (85 TWh / 28,200 TWh, IEA 2026).",
+      "peer_per_capita_2050_kw": {
+        "denmark": [
+          1.14,
+          1.14,
+          1.14
+        ],
+        "sweden": [
+          0.78,
+          0.83,
+          0.89
+        ],
+        "_source": "Danish Energy Agency AF25: 6.8 GW 2050 / 5.99 M; Svenska kraftnat LMA2026: 8.3-9.4 GW 2050 / 10.6 M (secondary, unverified); populations [verify]"
+      },
+      "fi_population_m": 5.6,
+      "class": "F/B/A",
+      "peer_now": {
+        "denmark": {
+          "pop_m": 5.99,
+          "consumption_twh": 36
+        },
+        "sweden": {
+          "pop_m": 10.6,
+          "consumption_twh": 134
+        },
+        "_note": "approximate 2024-25 population and electricity consumption (national statistics; S, approximate)"
+      },
+      "fi_consumption_twh_now": 85,
+      "peer_share_per_twh": 0.0,
+      "peer_note": "Central: peers scaled by population. Scaling by present electricity consumption (Finland uses about twice as much per person as Denmark) is reported as a pool sensitivity rather than pooled, because it compares 2050 peer capacity with present consumption."
+    },
+    "m5_envelope": {
+      "points": {
+        "2027": [
+          3.6,
+          3.94,
+          3.94
+        ],
+        "2028": [
+          3.9,
+          4.44,
+          4.44
+        ],
+        "2030": [
+          4.0,
+          4.5,
+          5.0
+        ],
+        "2035": [
+          6.0,
+          7.5,
+          9.0
+        ],
+        "2040": [
+          7.0,
+          11.0,
+          31.0
+        ]
+      },
+      "_source": "Blog 2027-2028 (operating+FID .. +planning); Fingrid Q3/2026 2030 and 2035 (Moderate..High); Fingrid vision 2040 (7/11/31 GW; the 2 GW scenario is already exceeded and excluded)",
+      "class": "S/F",
+      "treatment": "Discrete equal-weight mixture over the published states (low/mid/high, comonotone across years) with +-10% uniform jitter; 2030/2035 mid = midpoint of Fingrid Moderate..High.",
+      "extend_flat_after": 2040
+    },
+    "operation_projection": {
+      "cycles_per_year": [
+        150,
+        220,
+        330
+      ],
+      "dod": 0.9,
+      "cycles_note": "Fingrid 398 discharge Jun-Oct 2026 = 13-19 equivalent cycles per month at 1.9 h (fleet_ops.py) -> 160-230 /yr"
+    },
+    "mc": {
+      "n": 4000,
+      "seed": 20261116,
+      "sobol_base": 8192
+    },
+    "m2_diffusion": {
+      "_note": "Logistic stock through two anchors: N(T0)=2.092 GW (Nov 2026, M) and N(end-2028)=M1 realised committed stock (sample-wise). Saturation K sampled; r follows from logit(N/K) linear in t.",
+      "k_gw_loguniform": [
+        4.0,
+        31.0
+      ],
+      "k_source": "lower bound Fingrid 2030 Moderate (4 GW, nearly committed); upper bound Fingrid 2040 vision high and M3 connection cap (31 GW)",
+      "pooled_until": 2050,
+      "pooled_note": "With the implied r (10-90% time 6-15 yr), the logistic is near K by ~2038; later checkpoints carry the saturation prior (A).",
+      "class": "M/V/A"
+    },
+    "duration_model": {
+      "_note": "Fleet GWh for top-down methods (M2, M4): existing 3.97 GWh, committed 1.808 GW x 2.8 h, then net additions at new-build duration d_new(t), linear from 2.8 h (2027) to d_new_2050; stock declines scale GWh proportionally.",
+      "d_new_2050_h": [
+        2.0,
+        4.0,
+        8.0
+      ],
+      "d_source": "low: M3 without duration tilt (2 h); central: M3 central 2050 (4 h), Landy et al. 2026; high: Fingrid Q3/2026 scenario 4-8 h, Danish Energy Agency AF25 6 h (F/A)",
+      "m5_scenario_additions_h": [
+        4.0,
+        8.0
+      ],
+      "class": "F/A"
+    },
+    "ensemble": {
+      "checkpoints": [
+        2030,
+        2035,
+        2040,
+        2045,
+        2050
+      ],
+      "methods_by_checkpoint": {
+        "2030": [
+          "M1",
+          "M2",
+          "M3",
+          "M5"
+        ],
+        "2035": [
+          "M2",
+          "M3",
+          "M4",
+          "M5"
+        ],
+        "2040": [
+          "M2",
+          "M3",
+          "M4",
+          "M5"
+        ],
+        "2045": [
+          "M2",
+          "M3",
+          "M4",
+          "M5"
+        ],
+        "2050": [
+          "M2",
+          "M3",
+          "M4",
+          "M5"
+        ]
+      },
+      "weights": "equal per available method (linear opinion pool)",
+      "states": {
+        "low": 10,
+        "base": 50,
+        "high": 90
+      },
+      "_note": "Constant method set from 2035 so that state paths do not jump when a method drops out. M1 only to 2030 (queue horizon). M4 from 2035 (top-down shares ignore the committed queue: its 2030 median 3.4 GW is below the 3.9 GW already committed). After ~2038 M2 sits at its saturation level K and M5 is extended flat at Fingrid's 2040 vision states (both class A: long-run levels).",
+      "weights_from_2040": {
+        "M2": 0.5,
+        "M5": 0.5
+      },
+      "weights_note": "From 2040 M2 (saturation prior bounded by Fingrid's 31 GW) and M5 (Fingrid's 2040 states) share one method's weight, because both rest on the same institutional anchor."
+    }
+  }
+}
